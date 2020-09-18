@@ -5,7 +5,7 @@
 https://www.youtube.com/embed/VVKhPwpGHVw
 
 ### Paper  
-[ICRA2020_Occlusion_accumulation.pdf](http://icsl.snu.ac.kr/haramkim/Paper/ICRA2020_Occlusion_accumulation.pdf) 
+[ICRA2020_Occlusion_Accumulation.pdf](http://icsl.snu.ac.kr/haramkim/Paper/ICRA2020_Occlusion_Accumulation.pdf) 
 
 ### Demo run
 
