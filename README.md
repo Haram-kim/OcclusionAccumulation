@@ -5,8 +5,7 @@
 https://www.youtube.com/embed/VVKhPwpGHVw
 
 ### Paper  
-[Moving object detection for visual odometry in a dynamic environment based on occlusion accumulation]
-(http://icsl.snu.ac.kr/haramkim/Paper/ICRA2020_OcclusionAccumulation.pdf) 
+[Moving object detection for visual odometry in a dynamic environment based on occlusion accumulation](http://icsl.snu.ac.kr/haramkim/Paper/ICRA2020_OcclusionAccumulation.pdf) 
 
 ### Demo run
 
