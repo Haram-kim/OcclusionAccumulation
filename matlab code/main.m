@@ -17,10 +17,11 @@ addpath('SE(3)\');
 %               fx      fy      cx      cy      d0      d1      d2      d3      d4
 TUM = [	520.9	521.0	325.1	249.7	0.2312	-0.7849 -0.0033	-0.0001	0.9172  ];
 ICSL= [ 537.6   539.0   316.1   245.5   0       0        0      0       0       ];
+LARR= [ 544.3   546.1   326.9   236.1   0       0.0369  -0.0557 0       0       ];
 
-Inparam = ICSL; depth_unit = 1000; 
+Inparam = LARR; depth_unit = 1000; 
 
-% ICSL computer
+% Select dataset
 Dir = 'dataset\dynamic_board\'; start = 1;
 
 K = eye(3);
