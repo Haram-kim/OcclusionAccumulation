@@ -63,7 +63,7 @@ hf1 = imshow(zeros(height, width, 3),[0 1]);
 % Z_i(u): depth_cur || depth_cur_compensated
 % Z_{i+1}(u): depth_next || depth_next_compensated
 % Delta Z(u) : dZdt
-% tilde Omega: newly_discoverd_area
+% tilde Omega: newly_discovered_area
 % B(u): background_mask
 
 %% parameter setting
@@ -124,7 +124,7 @@ for iter = start:final
     accumulated_dZdt(dZdt <= - tau_beta) = 0; 
 
     %%% Occlusion Prediction on Newly Discovered Area
-    newly_discoverd_area = logical(abs((depth_cur_warped == 0) - (depth_next_compensated == 0)));
+    newly_discovered_area = logical(abs((depth_cur_warped == 0) - (depth_next_compensated == 0)));
     % Initial background mask
     background_mask = ~(accumulated_dZdt > tau_alpha);
 
@@ -138,14 +138,14 @@ for iter = start:final
             continue;
         end
         % occlusion prediction, Equation 10
-        accumulated_dZdt = AccumInterpolation(accumulated_dZdt, object_area, newly_discoverd_area, depth_next_compensated, iter);
+        accumulated_dZdt = AccumInterpolation(accumulated_dZdt, object_area, newly_discovered_area, depth_next_compensated, iter);
     end
     % Equation 7
     object_mask = (accumulated_dZdt > tau_alpha);
     
     % Erase predicted areas that are not neighborhood of moving objects
     % Update predicted area
-    predicted_area = (predicted_area + newly_discoverd_area).*object_mask;
+    predicted_area = (predicted_area + newly_discovered_area).*object_mask;
     % Label predicted area
     [predicted_area_label, predicted_area_num] = bwlabel(predicted_area);
     % Check predicted area is neighborhood of moving object
